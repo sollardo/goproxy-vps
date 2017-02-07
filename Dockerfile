@@ -9,6 +9,6 @@ RUN \
     
 ENTRYPOINT ["/opt/goproxy/goproxy-vps"]
 
-CMD ["-h"]
+CMD ["-logtostderr","-v","3"]
 
 EXPOSE 443
