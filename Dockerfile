@@ -7,6 +7,8 @@ RUN \
     && curl -fSL https://github.com/phuslu/goproxy-ci/releases/download/r1292/goproxy-vps_linux_amd64-r148.tar.xz | tar xJ \
     && apk del .build-deps 
     
-ENTRYPOINT ["/opt/goproxy/goproxy-vps -h"]
+ENTRYPOINT ["/opt/goproxy/goproxy-vps"]
+
+CMD ["-h"]
 
 EXPOSE 443
