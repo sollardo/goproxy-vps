@@ -1,12 +1,12 @@
 FROM alpine:3.5
 
 RUN \
-    apk add --no-cache --virtual .build-deps curl xz bash \
+    apk add --no-cache --virtual .build-deps curl \
     && mkdir -p /opt/goproxy \
     && cd /opt/goproxy \
-    && curl -L git.io/get-goproxy-vps | bash \
+    && curl -fSL https://github.com/phuslu/goproxy-ci/releases/download/r1292/goproxy-vps_linux_amd64-r148.tar.xz | tar xvf \
     && apk del .build-deps 
     
-ENTRYPOINT ["/opt/goproxy/goproxy-vps"]
+ENTRYPOINT ["/opt/goproxy/goproxy-vps -h"]
 
 EXPOSE 443
