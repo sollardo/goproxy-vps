@@ -7,8 +7,12 @@ RUN \
     && curl -fSL https://github.com/phuslu/goproxy-ci/releases/download/r1292/goproxy-vps_linux_amd64-r148.tar.xz | tar xJ \
     && apk del .build-deps 
     
-ENTRYPOINT ["/opt/goproxy/goproxy-vps"]
+ENV SERVER_NAME=my.server.com
 
-CMD ["-logtostderr","-v","3"]
+ADD entrypoint.sh /entrypoint.sh
+
+RUN chmod +x /entrypoint.sh 
+
+ENTRYPOINT  sh /entrypoint.sh 
 
 EXPOSE 443
