@@ -1,7 +1,7 @@
 FROM alpine:3.5
 
 RUN \
-    apk add --no-cache --virtual .build-deps curl \
+    apk add --no-cache --virtual .build-deps ca-certificates curl \
     && mkdir -p /opt/goproxy \
     && cd /opt/goproxy \
     && curl -fSL https://github.com/phuslu/goproxy-ci/releases/download/r1295/goproxy-vps_linux_amd64-r153.tar.xz | tar xJ \
