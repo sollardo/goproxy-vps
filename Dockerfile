@@ -11,6 +11,8 @@ ENV CONFIG_FILE_URL = https://pastbin/raw/....
 
 ADD entrypoint.sh /entrypoint.sh
 
+ADD welcome.html /welcome.html
+
 RUN chmod +x /entrypoint.sh 
 
 ENTRYPOINT  sh /entrypoint.sh 
