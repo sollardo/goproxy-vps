@@ -11,7 +11,7 @@ ENV CONFIG_FILE_URL = https://pastbin/raw/....
 
 ADD entrypoint.sh /entrypoint.sh
 
-ADD welcome.html /welcome.html
+ADD welcome.html /opt/goproxy/welcome.html
 
 RUN chmod +x /entrypoint.sh 
 
