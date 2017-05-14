@@ -1,11 +1,11 @@
-# deploy goproxy-vps to OPENSHIFT 3
+# deploy goproxy-vps to OPENSHIFT 3 online starter
 
-1. secure route TLS Termination: Passthrough, e.g. yourhostname.44fs.preview.openshiftapps.com
+1. secure route TLS Termination: Passthrough, e.g. yourhostname.1d35.starter-us-east-1.openshiftapps.com
 
-2. use XCA or openssl, sign a certificate for yourhostname.44fs.preview.openshiftapps.com, export cert+key.pem
+2. use XCA or openssl, sign a certificate for *.1d35.starter-us-east-1.openshiftapps.com, export cert+key.pem
 
-3. docker image: wangyi2005/goproxy-vps, Environment Variables: CONFIG_FILE_URL e.g.https://pastebin.com/raw/QUPuM4L6
+3. docker image: wangyi2005/goproxy-vps, Environment Variables: CONFIG_FILE_URL e.g.https://pastebin.com/raw/ystHQBiU
 
-4. create a pastebin, server_name = ["yourhostname.44fs.preview.openshiftapps.com"], pem from cert+key.pem
+4. create a pastebin, server_name = ["yourhostname.1d35.starter-us-east-1.openshiftapps.com"], pem from cert+key.pem
 
-5. chrome+SwitchyOmega https proxy:  yourhostname.44fs.preview.openshiftapps.com:443
+5. chrome+SwitchyOmega https proxy:  yourhostname.1d35.starter-us-east-1.openshiftapps.com:443
